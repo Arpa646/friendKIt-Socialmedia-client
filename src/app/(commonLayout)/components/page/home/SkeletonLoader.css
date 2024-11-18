@@ -1,0 +1,30 @@
+/* SkeletonLoader.css */
+
+/* 
+   The .shimmer class applies the shimmer effect to an element.
+   It uses a gradient background that transitions between lighter
+   and darker shades to mimic a loading animation.
+*/
+.shimmer {
+    background: linear-gradient(
+      90deg, /* Moves the gradient horizontally */
+      rgba(255, 255, 255, 0.1) 25%, /* Light shade starting at 25% */
+      rgba(255, 255, 255, 0.2) 50%, /* Slightly brighter shade at 50% */
+      rgba(255, 255, 255, 0.1) 75% /* Back to light shade at 75% */
+    );
+    background-size: 200% 100%; /* Ensures the gradient can move across the element */
+    animation: shimmer 1.5s infinite; /* Applies the shimmer animation to loop infinitely */
+}
+
+/* 
+   The @keyframes shimmer animation creates the illusion of movement.
+   It shifts the gradient's background position from left to right.
+*/
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0; /* Starts the gradient way off to the left */
+    }
+    100% {
+        background-position: 200% 0; /* Moves the gradient way off to the right */
+    }
+}

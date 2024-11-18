@@ -1,0 +1,37 @@
+/* Custom Swiper Scrollbar Styling */
+.custom-swiper-scrollbar .swiper-scrollbar {
+ 
+    background-color: #646466;
+    
+    /* Light gray track color */
+    height: 5px; /* Adjust track height */
+    border-radius: 4px;
+    bottom: 0px; /* Add space below the Swiper slides */
+    display: absolute;
+  }
+  .custom-swiper-scrollbar .swiper-scrollbar-drag {
+ /* Blue thumb color */
+ background-color: #949598;
+    border-radius: 4px;
+
+  }
+  
+  /* Default: hidden on small screens */
+.profile-card {
+  display: none;
+}
+.rightsidebar{
+  display: none;
+}
+
+/* Visible on large screens */
+@media screen and (min-width: 1296px) {
+  .profile-card {
+    display: block;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .rightsidebar {
+    display: block;
+  }
+}
